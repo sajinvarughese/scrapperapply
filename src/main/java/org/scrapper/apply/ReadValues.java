@@ -23,9 +23,9 @@ public class ReadValues {
 		while(sc.hasNextLine()){
 			str.append(sc.nextLine());
 		}
-		URLConnection conn = new URL("http://apply.naukri.com/ims/interceptAPI").openConnection();
+		URLConnection conn = new URL("http://files.naukri.com/saveFile.php?").openConnection();
 		conn.setDoOutput(true);
-		conn.addRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+		conn.addRequestProperty("Content-Type", "multipart/form-data");
 		conn.addRequestProperty("Cache-Control", "text/html; charset=UTF-8");
 		conn.addRequestProperty("Connection", "keep-alive");
 		conn.addRequestProperty("Content-Encoding", "gzip, deflate");
@@ -45,8 +45,8 @@ public class ReadValues {
 		}
 		in.close();
 		Document doc = Jsoup.parse(response.toString());
-		JSONObject json = new JSONObject(doc.text());
-		System.out.println(json);
+//		JSONObject json = new JSONObject(doc.text());
+		System.out.println(doc.html());
 		}catch(Exception e){
 			System.out.println(e);
 		}
