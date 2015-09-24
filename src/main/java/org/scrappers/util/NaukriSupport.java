@@ -1,4 +1,4 @@
-package org.scrapper.util;
+package org.scrappers.util;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package org.scrapper.apply;
+package org.scrappers.apply;
 
 import java.io.IOException;
 import org.json.JSONObject;

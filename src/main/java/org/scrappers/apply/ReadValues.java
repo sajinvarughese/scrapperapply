@@ -1,4 +1,4 @@
-package org.scrapper.apply;
+package org.scrappers.apply;
 
 import java.io.BufferedReader;
 import java.io.File;

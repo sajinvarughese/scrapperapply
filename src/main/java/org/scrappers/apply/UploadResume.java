@@ -1,9 +1,9 @@
-package org.scrapper.apply;
+package org.scrappers.apply;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.scrapper.util.MultipartUtility;
+import org.scrappers.util.MultipartUtility;
 public class UploadResume {
 	 public static void main(String[] args) {
 	        String charset = "UTF-8";

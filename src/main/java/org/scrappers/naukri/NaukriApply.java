@@ -1,8 +1,9 @@
 package org.scrappers.naukri;
 
-import org.scrapper.util.NaukriSupport;
+import org.scrappers.util.NaukriSupport;
 
 public class NaukriApply {
+	
 	public static final String LOCAL_RESUME_PATH = "/home/worklyf/Downloads/DOWNLOADS DUMP SEP 9/poc.docx";
 	
 	public static void applyJob(String jobUrl){
@@ -42,7 +43,7 @@ public class NaukriApply {
 	
 	
 	public static void main(String[] args) {
-		String naukriurl = "http://careers.ivenus.in/job-listings-Sales-Expert-Apple-Authorised-Reseller-Venus-Data-Products-Bhavnagar-Gandhidham-0-to-4-years-170815002314";
+		String naukriurl = "http://careers.thepsi.com/job-listings-AWS-Architect-Pratham-Software-Pvt-Ltd--Jaipur-6-to-9-years-130915001002";
 
 		applyJob(naukriurl);
 		
