@@ -2,6 +2,7 @@ package org.scrappers.bean;
 
 public class FormDetails {
 	private String company;
+	private String formfillUrl;
 	private String applyUrl;
 	private String formType;
 	private String parameterCount;
@@ -12,13 +13,21 @@ public class FormDetails {
 	private String country;
 	private String state;
 	private String city;
+	private String address;
 	private String experience;
 	private String experienceMonth;
 	private String experienceYear;
+	private String currentOrganization;
+	private String currentDesignation;
 	private String currentSalary;
 	private String expectedSalary;
 	private String submitId;
 	private String resumeUploaderId;
+	private String hiddenInputFields;
+	private String skills;
+	private String applyPost;
+	private String qualification;
+	private String gender;
 	
 	public String getCompany() {
 		return company;
@@ -127,6 +136,60 @@ public class FormDetails {
 	}
 	public void setParameterCount(String parameterCount) {
 		this.parameterCount = parameterCount;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getCurrentOrganization() {
+		return currentOrganization;
+	}
+	public void setCurrentOrganization(String currentOrganization) {
+		this.currentOrganization = currentOrganization;
+	}
+	public String getCurrentDesignation() {
+		return currentDesignation;
+	}
+	public void setCurrentDesignation(String currentDesignation) {
+		this.currentDesignation = currentDesignation;
+	}
+	public String getHiddenInputFields() {
+		return hiddenInputFields;
+	}
+	public void setHiddenInputFields(String hiddenInputFields) {
+		this.hiddenInputFields = hiddenInputFields;
+	}
+	public String getFormfillUrl() {
+		return formfillUrl;
+	}
+	public void setFormfillUrl(String formfillUrl) {
+		this.formfillUrl = formfillUrl;
+	}
+	public String getSkills() {
+		return skills;
+	}
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+	public String getApplyPost() {
+		return applyPost;
+	}
+	public void setApplyPost(String applyPost) {
+		this.applyPost = applyPost;
+	}
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 	

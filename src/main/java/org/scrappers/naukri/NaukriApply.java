@@ -6,7 +6,12 @@ public class NaukriApply {
 	
 	public static final String LOCAL_RESUME_PATH = "/home/worklyf/Downloads/DOWNLOADS DUMP SEP 9/poc.docx";
 	
+	/**
+	 * Method To Apply Naukri jobs with description page url
+	 * @param jobUrl
+	 */
 	public static void applyJob(String jobUrl){
+		
 		String domainName = jobUrl.substring(jobUrl.indexOf("//")+2, jobUrl.indexOf("/",jobUrl.indexOf("//")+2)); //Taking domain name from description page url
 
 		String jobId = jobUrl.substring(jobUrl.lastIndexOf("-")+1);  									// Taking jobid from description page url

@@ -15,7 +15,7 @@ public class NaukriSupport {
 	 * 
 	 * @param domain
 	 * @param jobId
-	 * @return uploadname
+	 * @return String
 	 */
 	public static String resumeUploaderName(String domain, String jobId){
 		String uploadname = "";
@@ -63,7 +63,7 @@ public class NaukriSupport {
 	 * 
 	 * @param uploaderName
 	 * @param filePath
-	 * @return uploadFlag
+	 * @return boolean
 	 */
 	public static boolean resumeUpload(String uploaderName, String filePath){
 		boolean uploadFlag = false;
@@ -132,7 +132,7 @@ public class NaukriSupport {
 	 * @param currentLocation
 	 * @param experienceYear
 	 * @param experienceMonth
-	 * @return
+	 * @return String
 	 */
 	public static String applyJob(String domainName, String jobId, String fileId, String fullName, String emailId, String mobileNo, String currentLocation, String experienceYear, String experienceMonth ){
 		String status = "";
