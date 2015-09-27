@@ -7,6 +7,8 @@ public class FormDetails {
 	private String formType;
 	private String parameterCount;
 	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String emailId;
 	private String mobileNumber;
 	private String dateOfBirth;
@@ -21,6 +23,7 @@ public class FormDetails {
 	private String currentDesignation;
 	private String currentSalary;
 	private String expectedSalary;
+	private String noticePeriod;
 	private String submitId;
 	private String resumeUploaderId;
 	private String hiddenInputFields;
@@ -191,7 +194,25 @@ public class FormDetails {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getNoticePeriod() {
+		return noticePeriod;
+	}
+	public void setNoticePeriod(String noticePeriod) {
+		this.noticePeriod = noticePeriod;
+	}
+
 	
 	
 }

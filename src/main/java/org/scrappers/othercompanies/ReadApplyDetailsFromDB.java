@@ -36,32 +36,35 @@ public class ReadApplyDetailsFromDB {
 		
 		while(result.next()){
 			
-			form.setFormfillUrl(result.getString(3) == null ? "" : result.getString(3));
-			form.setApplyUrl(result.getString(4) == null ? "" : result.getString(4)); 
-			form.setFormType(result.getString(5) == null ? "" : result.getString(5));
-			form.setParameterCount(result.getString(6) == null ? "" : result.getString(6));
-			form.setFullName(result.getString(7) == null ? "" : result.getString(7));
-			form.setEmailId(result.getString(8) == null ? "" : result.getString(8));
-			form.setMobileNumber(result.getString(9) == null ? "" : result.getString(9));
-			form.setDateOfBirth(result.getString(10) == null ? "" : result.getString(10));
-			form.setCountry(result.getString(11) == null ? "" : result.getString(11));
-			form.setState(result.getString(12) == null ? "" : result.getString(12));
-			form.setCity(result.getString(13) == null ? "" : result.getString(13));
-			form.setAddress(result.getString(14) == null ? "" : result.getString(14));
-			form.setExperience(result.getString(15) == null ? "" : result.getString(15));
-			form.setExperienceMonth(result.getString(16) == null ? "" : result.getString(16));
-			form.setExperienceYear(result.getString(17) == null ? "" : result.getString(17));
-			form.setCurrentOrganization(result.getString(18) == null ? "" : result.getString(18));
-			form.setCurrentDesignation(result.getString(19) == null ? "" : result.getString(19));
-			form.setCurrentSalary(result.getString(20) == null ? "" : result.getString(20));
-			form.setExpectedSalary(result.getString(21) == null ? "" : result.getString(21));
-			form.setSubmitId(result.getString(22) == null ? "" : result.getString(22));
-			form.setResumeUploaderId(result.getString(23) == null ? "" : result.getString(23));
-			form.setHiddenInputFields(result.getString(24) == null ? "" : result.getString(24));
-			form.setSkills(result.getString(25) == null ? "" : result.getString(25));
-			form.setApplyPost(result.getString(26) == null ? "" : result.getString(26));
-			form.setQualification(result.getString(27) == null ? "" : result.getString(27));
-			form.setGender(result.getString(28) == null ? "" : result.getString(28));
+			form.setFormfillUrl(result.getString("formfill_url") == null ? "" : result.getString("formfill_url"));
+			form.setApplyUrl(result.getString("apply_url") == null ? "" : result.getString("apply_url")); 
+			form.setFormType(result.getString("form_type") == null ? "" : result.getString("form_type"));
+			form.setParameterCount(result.getString("parameter_count") == null ? "" : result.getString("parameter_count"));
+			form.setFullName(result.getString("full_name") == null ? "" : result.getString("full_name"));
+			form.setFirstName(result.getString("first_name") == null ? "" : result.getString("first_name"));
+			form.setLastName(result.getString("last_name") == null ? "" : result.getString("last_name"));
+			form.setEmailId(result.getString("email_id") == null ? "" : result.getString("email_id"));
+			form.setMobileNumber(result.getString("mobile_number") == null ? "" : result.getString("mobile_number"));
+			form.setDateOfBirth(result.getString("date_of_birth") == null ? "" : result.getString("date_of_birth"));
+			form.setCountry(result.getString("country") == null ? "" : result.getString("country"));
+			form.setState(result.getString("state") == null ? "" : result.getString("state"));
+			form.setCity(result.getString("city") == null ? "" : result.getString("city"));
+			form.setAddress(result.getString("address") == null ? "" : result.getString("address"));
+			form.setExperience(result.getString("experience") == null ? "" : result.getString("experience"));
+			form.setExperienceMonth(result.getString("experience_month") == null ? "" : result.getString("experience_month"));
+			form.setExperienceYear(result.getString("experience_year") == null ? "" : result.getString("experience_year"));
+			form.setCurrentOrganization(result.getString("current_organization") == null ? "" : result.getString("current_organization"));
+			form.setCurrentDesignation(result.getString("current_designation") == null ? "" : result.getString("current_designation"));
+			form.setCurrentSalary(result.getString("current_salary") == null ? "" : result.getString("current_salary"));
+			form.setExpectedSalary(result.getString("expected_salary") == null ? "" : result.getString("expected_salary"));
+			form.setSubmitId(result.getString("submit_id") == null ? "" : result.getString("submit_id"));
+			form.setResumeUploaderId(result.getString("resume_uploader_id") == null ? "" : result.getString("resume_uploader_id"));
+			form.setHiddenInputFields(result.getString("hidden_input_fields") == null ? "" : result.getString("hidden_input_fields"));
+			form.setSkills(result.getString("skills") == null ? "" : result.getString("skills"));
+			form.setApplyPost(result.getString("apply_post") == null ? "" : result.getString("apply_post"));
+			form.setQualification(result.getString("qualification") == null ? "" : result.getString("qualification"));
+			form.setGender(result.getString("gender") == null ? "" : result.getString("gender"));
+			form.setNoticePeriod(result.getString("notice_period") == null ? "" : result.getString("notice_period"));
 
 			
 		}

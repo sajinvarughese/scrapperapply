@@ -1,7 +1,8 @@
 package org.scrappers.bean;
 
 public class UserDetails {
-	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String emailId;
 	private String mobileNumber;
 	private String dateOfBirth;
@@ -20,12 +21,7 @@ public class UserDetails {
 	private String gender;
 	
 	
-	public String getFullName() {
-		return fullName;
-	}
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
-	}
+	
 	public String getEmailId() {
 		return emailId;
 	}
@@ -121,6 +117,18 @@ public class UserDetails {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 }

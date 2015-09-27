@@ -36,23 +36,24 @@ public class ReadUserDetailsFromDB {
 				
 				while(result.next()){
 					
-					user.setFullName(result.getString(2) == null ? "" : result.getString(2));
-					user.setEmailId(result.getString(3) == null ? "" : result.getString(3));
-					user.setMobileNumber(result.getString(4) == null ? "" : result.getString(4));
-					user.setDateOfBirth(result.getString(5) == null ? "" : result.getString(5));
-					user.setCountry(result.getString(6) == null ? "" : result.getString(6));
-					user.setState(result.getString(7) == null ? "" : result.getString(7));
-					user.setCity(result.getString(8) == null ? "" : result.getString(8));
-					user.setAddress(result.getString(9) == null ? "" : result.getString(9));
-					user.setExperienceMonth(result.getString(10) == null ? "" : result.getString(10));
-					user.setExperienceYear(result.getString(11) == null ? "" : result.getString(11));
-					user.setCurrentOrganization(result.getString(12) == null ? "" : result.getString(12));
-					user.setCurrentDesignation(result.getString(13) == null ? "" : result.getString(13));
-					user.setCurrentSalary(result.getString(14) == null ? "" : result.getString(14));
-					user.setExpectedSalary(result.getString(15) == null ? "" : result.getString(15));
-					user.setSkills(result.getString(16) == null ? "" : result.getString(16));
-					user.setQualification(result.getString(17) == null ? "" : result.getString(17));
-					user.setGender(result.getString(18) == null ? "" : result.getString(18));
+					user.setFirstName(result.getString("first_name") == null ? "" : result.getString("first_name"));
+					user.setLastName(result.getString("last_name") == null ? "" : result.getString("last_name"));
+					user.setEmailId(result.getString("email_id") == null ? "" : result.getString("email_id"));
+					user.setMobileNumber(result.getString("mobile_number") == null ? "" : result.getString("mobile_number"));
+					user.setDateOfBirth(result.getString("date_of_birth") == null ? "" : result.getString("date_of_birth"));
+					user.setCountry(result.getString("country") == null ? "" : result.getString("country"));
+					user.setState(result.getString("state") == null ? "" : result.getString("state"));
+					user.setCity(result.getString("city") == null ? "" : result.getString("city"));
+					user.setAddress(result.getString("address") == null ? "" : result.getString("address"));
+					user.setExperienceMonth(result.getString("experience_month") == null ? "" : result.getString("experience_month"));
+					user.setExperienceYear(result.getString("experience_year") == null ? "" : result.getString("experience_year"));
+					user.setCurrentOrganization(result.getString("current_organization") == null ? "" : result.getString("current_organization"));
+					user.setCurrentDesignation(result.getString("current_designation") == null ? "" : result.getString("current_designation"));
+					user.setCurrentSalary(result.getString("current_salary") == null ? "" : result.getString("current_salary"));
+					user.setExpectedSalary(result.getString("expected_salary") == null ? "" : result.getString("expected_salary"));
+					user.setSkills(result.getString("skills") == null ? "" : result.getString("skills"));
+					user.setQualification(result.getString("qualification") == null ? "" : result.getString("qualification"));
+					user.setGender(result.getString("gender") == null ? "" : result.getString("gender"));
 
 
 				}
