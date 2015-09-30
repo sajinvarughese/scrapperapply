@@ -37,6 +37,6 @@ public class ApplyJob {
 	
 	
 	public static void main(String[] args) {	
-		checkAndApply("sajinvarughese@gmail.com", "CitiusTech");
+		checkAndApply("sajinvarughese@gmail.com", "Netscribes");
 	}
 }

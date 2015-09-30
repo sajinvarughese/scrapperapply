@@ -80,6 +80,24 @@ public class ApplyJobHelper {
         	multipart.addFormField(dateOfBirthParameter, dateOfBirthValue);
         }
         
+        // Getting And passing dobDay to Form
+        if(!form.getDobDay().equals("")){
+        	System.out.println(form.getDobDay()+" , "+user.getDateOfBirth().split("/")[0]);
+        	multipart.addFormField(form.getDobDay(), user.getDateOfBirth().split("/")[0]);
+        }
+        
+        // Getting And passing dobMonth to Form
+        if(!form.getDobMonth().equals("")){
+        	System.out.println(form.getDobMonth()+" , "+user.getDateOfBirth().split("/")[1]);
+        	multipart.addFormField(form.getDobMonth(), user.getDateOfBirth().split("/")[1]);
+        }
+        
+        // Getting And passing dobYear to Form
+        if(!form.getDobYear().equals("")){
+        	System.out.println(form.getDobYear()+" , "+user.getDateOfBirth().split("/")[2]);
+        	multipart.addFormField(form.getDobYear(), user.getDateOfBirth().split("/")[2]);
+        }
+        
         // Getting And passing country to Form
         if(!form.getCountry().equals("")){
     		System.out.println(form.getCountry()+" , "+user.getCountry());
@@ -110,6 +128,19 @@ public class ApplyJobHelper {
         	multipart.addFormField(form.getAddress(), user.getAddress());
         }
         
+        // Getting And passing preferredLocation to Form
+        if(!form.getPreferredLocation().equals("")){
+        	String preferredLocation = form.getPreferredLocation();
+        	String input = "";
+        	if(preferredLocation.contains("~$~")){
+        		preferredLocation = preferredLocation.replace("~$~", "");  
+        		input = selectTagValues(form, user, preferredLocation , "Preferred Location");
+        	}
+    		System.out.println(preferredLocation+" , "+input);
+        	multipart.addFormField(preferredLocation, input);
+        }
+        
+        
         // Getting And passing qualification to Form, if two field having same qualification then splitting(qualification~:~highestqualification)
         if(!form.getQualification().equals("")){
         	String qualifications = form.getQualification();
@@ -134,15 +165,21 @@ public class ApplyJobHelper {
         // Getting And passing experience to Form
         if(!form.getExperience().equals("")){
         	String experience = form.getExperience();
+    		String input = user.getExperienceYear() +" Year "+user.getExperienceMonth()+" Month";
         	String[] split = null;
         	if(experience.contains("~:~")){     	
         		split	= experience.split("\\~\\:\\~");
             }else{
-            	split = new String[]{experience};;
+            	split = new String[]{experience};
             }
-        	for(String experienceParameter : split){        
-    		System.out.println(experienceParameter+" , "+user.getExperienceYear() +" Year "+user.getExperienceMonth()+" Month");
-        	multipart.addFormField(experienceParameter, user.getExperienceYear() +" Year "+user.getExperienceMonth()+" Month");
+        	for(String experienceParameter : split){  
+            	if(experienceParameter.contains("~$~")){
+            		experienceParameter = experienceParameter.replace("~$~", "");  
+            		input = selectTagValues(form, user, experienceParameter , "Experience");
+            	}
+        		
+    		System.out.println(experienceParameter+" , "+input);
+        	multipart.addFormField(experienceParameter, input);
         	}
         }
         
@@ -309,12 +346,21 @@ public class ApplyJobHelper {
     		Response conn = Jsoup.connect(form.getFormfillUrl()).timeout(30000).execute();
     		doc = conn.parse();	
     		}
+			if(doc.select("[name = "+parameter+"]").first().tagName().equals("select")){
     		Elements selectOption = doc.select("[name = "+parameter+"]").select("option");
     		for(Element option : selectOption){
     			if(!option.attr("value").equals("")){
     			splitOption.append(option.attr("value")+"~||~");
     			}
     		}
+			}else if(doc.select("[name = "+parameter+"]").first().tagName().equals("input")){
+				Elements selectOption = doc.select("[name = "+parameter+"]");
+	    		for(Element option : selectOption){
+	    			if(!option.attr("value").equals("")){
+	    			splitOption.append(option.attr("value")+"~||~");
+	    			}
+	    		}
+			}
     		allOption = splitOption.toString().split("\\~\\|\\|\\~");
     		input = (String) JOptionPane.showInputDialog(null, fieldName,
     		        "The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null, // Use
@@ -322,6 +368,9 @@ public class ApplyJobHelper {
     		                                                                        // icon
     		        allOption, // Array of choices
     		        allOption[0]); // Initial choice
+    		if(input == null){
+    			input = "";
+    		}
 		}catch(Exception e){
 			System.out.println(e);
 		}

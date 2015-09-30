@@ -65,6 +65,10 @@ public class ReadApplyDetailsFromDB {
 			form.setQualification(result.getString("qualification") == null ? "" : result.getString("qualification"));
 			form.setGender(result.getString("gender") == null ? "" : result.getString("gender"));
 			form.setNoticePeriod(result.getString("notice_period") == null ? "" : result.getString("notice_period"));
+			form.setDobDay(result.getString("dob_day") == null ? "" : result.getString("dob_day"));
+			form.setDobMonth(result.getString("dob_month") == null ? "" : result.getString("dob_month"));
+			form.setDobYear(result.getString("dob_year") == null ? "" : result.getString("dob_year"));
+			form.setPreferredLocation(result.getString("preferred_location") == null ? "" : result.getString("preferred_location"));
 
 			
 		}

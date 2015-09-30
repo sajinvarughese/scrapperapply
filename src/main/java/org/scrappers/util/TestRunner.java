@@ -12,7 +12,7 @@ public class TestRunner {
 	        String charset = "UTF-8";
 	        File uploadFile1 = new File("/home/worklyf/Downloads/DOWNLOADS DUMP SEP 9/skill MODIFIED.docx");
 //	        File uploadFile2 = new File("e:/Test/PIC2.JPG");
-	        String requestURL = "http://www.citiustech.com/aboutus/applynow.aspx?j=RBBcjQ2ZZx8%3d";
+	        String requestURL = "http://www.oberoirealty.com/site/career";
 	 
 	        try {
 //	        	

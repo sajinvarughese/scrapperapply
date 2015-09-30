@@ -12,10 +12,14 @@ public class FormDetails {
 	private String emailId;
 	private String mobileNumber;
 	private String dateOfBirth;
+	private String dobDay;
+	private String dobMonth;
+	private String dobYear;
 	private String country;
 	private String state;
 	private String city;
 	private String address;
+	private String preferredLocation;
 	private String experience;
 	private String experienceMonth;
 	private String experienceYear;
@@ -211,6 +215,30 @@ public class FormDetails {
 	}
 	public void setNoticePeriod(String noticePeriod) {
 		this.noticePeriod = noticePeriod;
+	}
+	public String getDobDay() {
+		return dobDay;
+	}
+	public void setDobDay(String dobDay) {
+		this.dobDay = dobDay;
+	}
+	public String getDobMonth() {
+		return dobMonth;
+	}
+	public void setDobMonth(String dobMonth) {
+		this.dobMonth = dobMonth;
+	}
+	public String getDobYear() {
+		return dobYear;
+	}
+	public void setDobYear(String dobYear) {
+		this.dobYear = dobYear;
+	}
+	public String getPreferredLocation() {
+		return preferredLocation;
+	}
+	public void setPreferredLocation(String preferredLocation) {
+		this.preferredLocation = preferredLocation;
 	}
 
 	
